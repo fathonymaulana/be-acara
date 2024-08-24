@@ -1,6 +1,5 @@
 import crypto from "crypto";
-
-const SECRET = "12cbba1cce8a6b6d57717eda62189cf1hkj";
+import { SECRET } from "./env";
 
 export const encrypt = (password: string): string => {
   const encrypted = crypto

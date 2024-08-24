@@ -61,8 +61,9 @@ export default {
     }
   },
   async login(req: Request, res: Response) {
+    const { identifier, password } = req.body as unknown as TLogin;
     try {
-      const { identifier, password } = req.body as unknown as TLogin;
+      // ambil data user berdasarkan "identifier" -> email dan username
 
       const userByIdentifier = await UserModel.findOne({
         $or: [
@@ -82,7 +83,9 @@ export default {
         });
       }
 
-      const validatePassword = encrypt(password) === userByIdentifier.password;
+      // validasi password
+      const validatePassword: boolean =
+        encrypt(password) === userByIdentifier.password;
 
       if (!validatePassword) {
         return res.status(403).json({
@@ -92,7 +95,7 @@ export default {
       }
 
       res.status(200).json({
-        message: "Success login",
+        message: "Login success",
         data: userByIdentifier,
       });
     } catch (error) {
