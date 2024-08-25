@@ -69,6 +69,7 @@ export default {
       schema: {$ref: "#/components/schemas/LoginRequest"}
      }
      */
+
     const { identifier, password } = req.body as unknown as TLogin;
     try {
       // ambil data user berdasarkan "identifier" -> email dan username
