@@ -3,17 +3,17 @@ import swaggerAutogen from "swagger-autogen";
 const doc = {
   info: {
     version: "v0.0.1",
-    title: "Dokumentasi API Web Event Management - ACARA",
-    description: "Implementasi tools Swagger pada Dokumentasi API ACARA",
+    title: "Dokumentasi API ACARA",
+    description: "Dokumentasi API ACARA",
   },
   servers: [
     {
       url: "http://localhost:3000/api",
-      description: "Local Development",
+      description: "Local Server",
     },
     {
       url: "https://back-end-acara.vercel.app/api",
-      description: "Production Server",
+      description: "Deploy Server",
     },
   ],
   components: {

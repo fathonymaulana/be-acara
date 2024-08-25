@@ -1,11 +1,11 @@
 import express from "express";
 import bodyParser from "body-parser";
-
-import router from "./routes/api";
-import docs from "./docs/route";
 import cors from "cors";
 
+import router from "./routes/api";
+
 import db from "./utils/database";
+import docs from "./docs/route";
 
 async function init() {
   try {
