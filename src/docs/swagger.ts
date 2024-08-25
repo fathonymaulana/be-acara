@@ -10,6 +10,10 @@ const doc = {
   servers: [
     {
       url: "http://localhost:3000/api",
+      description: "Local Development",
+    },
+    {
+      url: "https://back-end-acara.vercel.app/api",
       description: "",
     },
   ],

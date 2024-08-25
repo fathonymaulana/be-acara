@@ -1,38 +1,22 @@
-import express, { Express } from "express";
+import express from "express";
 import bodyParser from "body-parser";
-import swaggerUi from "swagger-ui-express";
-import swaggerOutput from "./docs/swagger_output.json";
-import fs from "fs";
-import path from "path";
 
 import router from "./routes/api";
+import docs from "./docs/route";
 
 import db from "./utils/database";
-
-function docs(app: Express) {
-  const css = fs.readFileSync(
-    path.resolve(__dirname, "../node_modules/swagger-ui-dist/swagger-ui.css"),
-    "utf8"
-  );
-  app.use(
-    "/api-docs",
-    swaggerUi.serve,
-    swaggerUi.setup(swaggerOutput, {
-      customCss: css,
-    })
-  );
-}
+import cors from "cors";
 
 async function init() {
   try {
+    const PORT = 3000;
     const result = await db();
 
     console.log("database status: ", result);
 
     const app = express();
+    app.use(cors());
     app.use(bodyParser.json());
-
-    const PORT = 3000;
 
     app.get("/", (req, res) => {
       res.status(200).json({
