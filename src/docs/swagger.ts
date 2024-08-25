@@ -2,11 +2,10 @@ import swaggerAutogen from "swagger-autogen";
 
 const doc = {
   info: {
-    version: "v1.0.0",
-    title: "Swagger Demo Project",
-    description: "Implementation of Swagger with TypeScript",
+    version: "v0.0.1",
+    title: "Dokumentasi API Web Event Management - ACARA",
+    description: "Implementasi tools Swagger pada Dokumentasi API ACARA",
   },
-
   servers: [
     {
       url: "http://localhost:3000/api",
@@ -14,7 +13,7 @@ const doc = {
     },
     {
       url: "https://back-end-acara.vercel.app/api",
-      description: "",
+      description: "Production Server",
     },
   ],
   components: {

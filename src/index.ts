@@ -3,9 +3,9 @@ import bodyParser from "body-parser";
 
 import router from "./routes/api";
 import docs from "./docs/route";
+import cors from "cors";
 
 import db from "./utils/database";
-import cors from "cors";
 
 async function init() {
   try {
@@ -15,6 +15,7 @@ async function init() {
     console.log("database status: ", result);
 
     const app = express();
+
     app.use(cors());
     app.use(bodyParser.json());
 
