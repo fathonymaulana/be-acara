@@ -1,5 +1,7 @@
 import express from "express";
 import bodyParser from "body-parser";
+import swaggerUi from "swagger-ui-express";
+import swaggerOutput from "./docs/swagger_output.json";
 
 import router from "./routes/api";
 
@@ -24,6 +26,7 @@ async function init() {
     });
 
     app.use("/api", router);
+    app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(swaggerOutput));
 
     app.listen(PORT, () => {
       console.log(`Server is running on http://localhost:${PORT}`);
