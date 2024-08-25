@@ -113,11 +113,11 @@ export default {
       });
     }
   },
+
   async me(req: IReqUser, res: Response) {
     try {
-      const userData = req.user;
-
-      const result = await UserModel.findById(userData?.id);
+      const user = req.user;
+      const result = await UserModel.findById(user?.id);
 
       res.status(200).json({
         message: "Success get user profile",
