@@ -28,6 +28,16 @@ const doc = {
         identifier: "agungrizkyana",
         password: "12341234",
       },
+      RegisterRequest: {
+        fullName: "joni joni",
+        username: "joni2024",
+        email: "joni2024@yopmail.com",
+        password: "123412341",
+        confirmPassword: "123412341",
+      },
+      ActivationRequest: {
+        code: "xxx",
+      },
     },
   },
 };
