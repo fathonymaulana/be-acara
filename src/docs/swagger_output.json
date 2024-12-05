@@ -194,7 +194,7 @@
         "properties": {
           "code": {
             "type": "string",
-            "example": "xxx"
+            "example": "abcdef"
           }
         },
         "xml": {

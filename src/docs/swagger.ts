@@ -36,7 +36,7 @@ const doc = {
         confirmPassword: "123412341",
       },
       ActivationRequest: {
-        code: "xxx",
+        code: "abcdef",
       },
     },
   },

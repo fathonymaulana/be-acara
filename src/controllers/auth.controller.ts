@@ -35,11 +35,15 @@ const registerValidateSchema = Yup.object({
         return regex.test(value);
       }
     )
-    .test("at-least-one-number", "Contains at least one number", (value) => {
-      if (!value) return false;
-      const regex = /^(?=.*\d)/;
-      return regex.test(value);
-    }),
+    .test(
+      "at-least-one-number",
+      "Contains at least one uppercase letter",
+      (value) => {
+        if (!value) return false;
+        const regex = /^(?=.*\d)/;
+        return regex.test(value);
+      }
+    ),
   confirmPassword: Yup.string()
     .required()
     .oneOf([Yup.ref("password"), ""], "Password not match"),
@@ -173,11 +177,12 @@ export default {
      #swagger.tags = ['Auth']
      #swagger.requestBody = {
       required: true,
-      schema: {$ref: "#/components/schemas/ActivationRequest"}
+      schema: {$ref: '#/components/schemas/ActivationRequest'}
      }
      */
     try {
       const { code } = req.body as { code: string };
+
       const user = await UserModel.findOneAndUpdate(
         {
           activationCode: code,
@@ -190,7 +195,7 @@ export default {
         }
       );
       res.status(200).json({
-        message: "User succesfuly activated",
+        message: "user successfully activated",
         data: user,
       });
     } catch (error) {
