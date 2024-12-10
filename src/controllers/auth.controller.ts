@@ -4,7 +4,7 @@ import * as Yup from "yup";
 import UserModel from "../models/user.model";
 import { encrypt } from "../utils/encryption";
 import { generateToken } from "../utils/jwt";
-import { IReqUser } from "../middlewares/auth.middleware";
+import { IReqUser } from "../utils/interfaces";
 
 type TRegister = {
   fullName: string;
@@ -57,7 +57,7 @@ export default {
       required: true,
       schema: {$ref: "#/components/schemas/RegisterRequest"}
      }
-     */
+    */
     const { fullName, username, email, password, confirmPassword } =
       req.body as unknown as TRegister;
 
