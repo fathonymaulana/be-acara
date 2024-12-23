@@ -13,20 +13,25 @@ export type TypeBanner = Yup.InferType<typeof bannerDAO>;
 
 interface Banner extends TypeBanner {}
 
-const BannerSchema = new Schema<Banner>({
-  title: {
-    type: Schema.Types.String,
-    required: true,
+const BannerSchema = new Schema<Banner>(
+  {
+    title: {
+      type: Schema.Types.String,
+      required: true,
+    },
+    image: {
+      type: Schema.Types.String,
+      required: true,
+    },
+    isShow: {
+      type: Schema.Types.Boolean,
+      required: true,
+    },
   },
-  image: {
-    type: Schema.Types.String,
-    required: true,
-  },
-  isShow: {
-    type: Schema.Types.Boolean,
-    required: true,
-  },
-});
+  {
+    timestamps: true,
+  }
+);
 
 const BannerModel = mongoose.model(BANNER_MODEL_NAME, BannerSchema);
 export default BannerModel;
