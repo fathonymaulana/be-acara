@@ -25,15 +25,15 @@ const doc = {
     },
     schemas: {
       LoginRequest: {
-        identifier: "agungrizkyana",
-        password: "12341234",
+        identifier: "agung2025",
+        password: "Agung2025!",
       },
       RegisterRequest: {
-        fullName: "joni joni",
-        username: "joni2024",
-        email: "joni2024@yopmail.com",
-        password: "123412341",
-        confirmPassword: "123412341",
+        fullName: "member2025",
+        username: "member2025",
+        email: "member2025@yopmail.com",
+        password: "Member2025!",
+        confirmPassword: "Member2025!",
       },
       ActivationRequest: {
         code: "abcdef",
