@@ -1037,11 +1037,11 @@
         "properties": {
           "identifier": {
             "type": "string",
-            "example": "agungrizkyana"
+            "example": "agung2025"
           },
           "password": {
             "type": "string",
-            "example": "12341234"
+            "example": "Agung2025!"
           }
         },
         "xml": {
@@ -1053,23 +1053,23 @@
         "properties": {
           "fullName": {
             "type": "string",
-            "example": "joni joni"
+            "example": "member2025"
           },
           "username": {
             "type": "string",
-            "example": "joni2024"
+            "example": "member2025"
           },
           "email": {
             "type": "string",
-            "example": "joni2024@yopmail.com"
+            "example": "member2025@yopmail.com"
           },
           "password": {
             "type": "string",
-            "example": "123412341"
+            "example": "Member2025!"
           },
           "confirmPassword": {
             "type": "string",
-            "example": "123412341"
+            "example": "Member2025!"
           }
         },
         "xml": {
