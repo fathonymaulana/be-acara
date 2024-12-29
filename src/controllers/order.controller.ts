@@ -56,8 +56,6 @@ export default {
         search,
       });
 
-      console.log(query);
-
       const result = await OrderModel.find(query)
         .limit(+limit)
         .skip((+page - 1) * +limit)
